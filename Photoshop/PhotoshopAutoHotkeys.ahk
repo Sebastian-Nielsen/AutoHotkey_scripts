@@ -20,9 +20,9 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
  
 ; Modifier key list: [#] Win
-;                    [^] Ctrl
-;                    [!] Alt
-;                    [+] Shift
+;                    [^] Ctrl   (general useful shortcuts, eg. lasso)
+;                    [!] Alt    (brush settings shortcuts use 'alt')
+;                    [+] Shift  (All layer settings (incl. generic delete) use 'shift')
 ; For other keys and commands refer to the AHK manual (https://autohotkey.com/docs/AutoHotkey.htm)
  
 ; Hotkeys go inside the #IfWinActive section
@@ -37,16 +37,40 @@ F1::ExitApp
 ; Reload the script, useful when making frequent changes
 F2::Reload
  
-; ----------------------------------
+; ----------------------------------  General shortcuts [Ctrl]
+^s::Send, l   ; Lasso tool   (Selection)
+; ctrl+d      ;              (De-select)
+
+; ----------------------------------  Brush colors [Alt]
+
+!w::Send, ^+{F4}   ; Red     R
+!q::Send, ^+{F3}   ; Green   G
+!e::Send, ^+{F5}   ; Blue    B
+
+!1::Send, ^+{F2}   ; BLACK 
+!2::Send, ^+{F6}   ; Purple
+!3::Send, ^+{F7}   ; Orange
+!4::Send, ^+{F7}   ; Orange
+!5::Send, ^+{F7}   ; Orange
 
 
-^1::Send, ^+{F2}   ; BLACK
-^2::Send, ^+{F3}   ; Green
-^3::Send, ^+{F4}   ; Red
-^4::Send, ^+{F5}   ; Blue
-^5::Send, ^+{F6}   ; Purple
-^6::Send, ^+{F7}   ; Orange
+; ----------------------------------  Brush smoothing
+			
+!a::Send, !1   ; 10% 
+!s::Send, !0   ; 100%
 
+; ----------------------------------  Brush size
+
+!z::Send, +{F12}  ; Set brush size=10
+!x::Send, ^{F12}  ; Set brush size=25
+
+; ----------------------------------  Layer 
++r::Send, {F7}
++q::Send, ^+!n    ; Create new layer
++d::Send, {Delete}; Delete layer
++w::Send, ^e      ; Merge selected layers
++e::Send, ^+e     ; Merge all visible layers
+; ----------------------------------  
 #+g::
 Send, ^!+g             ; *Open Gaussian blur using hotkey
 WinWait, Gaussian Blur ; Wait for the dialog to show
