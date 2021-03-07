@@ -40,7 +40,7 @@ F2::Reload
 ; ----------------------------------  General shortcuts [Ctrl]
 ^s::Send, l   ; Lasso tool   (Selection)
 ; ctrl+d      ;              (De-select)
-
++d::Send, {Delete}, Send, {enter}
 ; ----------------------------------  Brush colors [Alt]
 
 !w::Send, ^+{F4}   ; Red     R
@@ -63,11 +63,15 @@ F2::Reload
 
 !z::Send, +{F12}  ; Set brush size=10
 !x::Send, ^{F12}  ; Set brush size=25
+!c::Send, ^+{F12}  ; Set brush size=50
+!v::Send, ^+{F11}
+
+; hold shift and click with mouse to draw straight lines
 
 ; ----------------------------------  Layer 
 +r::Send, {F7}
 +q::Send, ^+!n    ; Create new layer
-+d::Send, {Delete}; Delete layer
+; +d::Send, {Delete}; Delete layer
 +w::Send, ^e      ; Merge selected layers
 +e::Send, ^+e     ; Merge all visible layers
 ; ----------------------------------  
