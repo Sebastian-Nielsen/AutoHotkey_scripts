@@ -39,8 +39,11 @@ F2::Reload
  
 ; ----------------------------------  General shortcuts [Ctrl]
 ^s::Send, l   ; Lasso tool   (Selection)
+^e::Send, m   ; Square tool  (Selection)
 ; ctrl+d      ;              (De-select)
-+d::Send, {Delete}, Send, {enter}
++d::
+	Send, {Delete} 
+	Send, {enter}
 ; ----------------------------------  Brush colors [Alt]
 
 !w::Send, ^+{F4}   ; Red     R

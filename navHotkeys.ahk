@@ -1,4 +1,7 @@
-﻿; ----------------------------------------------------------------
+﻿; Reload the script, useful when making frequent changes
+F2::Reload
+
+; ----------------------------------------------------------------
 ;   GENERAL NAVIGATION 
 ; ----------------------------------------------------------------
 
@@ -73,5 +76,3 @@
 
 
 
-; Reload the script, useful when making frequent changes
-; F2::Reload
