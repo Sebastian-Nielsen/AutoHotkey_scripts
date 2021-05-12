@@ -14,15 +14,24 @@ LControl & RAlt Up:: AltGr := false
 	; 1::SendRaw, 
 	2::SendRaw, @
 	3::SendRaw, £
-	4::SendRaw, $    
+	4::SendRaw, $ 
 	5::SendRaw, €
-	6::SendRaw, {
+	; 6::SendRaw, 
+	7::SendRaw, {
 	8::SendRaw, [
-	9::SendRaw, ]
+	9::SendRaw, ] 
 	0::SendRaw, }
 	<::SendRaw, \
 
 #If ; turn off context sensitivity 
 
+; (ctrl)+(alt) mappings
+^!u::SendRaw, {
+^!i::SendRaw, }
+^!j::SendRaw, [
+^!k::SendRaw, ]
+
+
+
 ; load the script, useful when making frequent changes
-F2::Reload
+; F2::Reload

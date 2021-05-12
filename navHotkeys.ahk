@@ -1,5 +1,5 @@
 ﻿; Reload the script, useful when making frequent changes
-F2::Reload
+; F2::Reload
 
 ; ----------------------------------------------------------------
 ;   GENERAL NAVIGATION 
