@@ -6,30 +6,30 @@
 ; ----------------------------------------------------------------
 
 ; On Ctrl + Up, send home
-^!left::Send, {home}
+; ^!left::Send, {home}
 ^!h::Send, {home}
 
 ; On Ctrl + Down, send to end
-^!right::Send, {end}
+; ^!right::Send, {end}
 ^!l::Send, {end}
 
 
 
 ; On Ctrl + Shift + Up, send home & highlight text
-+!^left::Send, +{home}
+; +!^left::Send, +{home}
 +!^h::Send, +{home}
 
 
 ; On Ctrl + Shift + Down, send to end & highlight text
-+!^right::Send, +{end}
+; +!^right::Send, +{end}
 +!^l::Send, +{end}
 
 ; ----------------------------------------------------------------
 
-!left::Send,   {left}
+; !left::Send,   {left}
 !h::Send, {left}
 
-!right::Send, {right}
+; !right::Send, {right}
 !l::Send, {right}
 
 !j::Send, {down}
@@ -37,26 +37,26 @@
 !k::Send, {up}
 
 
-+!left::Send, +{left}
+; +!left::Send, +{left}
 +!h::Send, +{left}
 
-+!right::Send, +{right}
+; +!right::Send, +{right}
 +!l::Send, +{right}
 
 
 ; ----------------------------------------------------------------
 
-^left::Send, ^{left}
+; ^left::Send, ^{left}
 ^h::Send, ^{left}
 
-^right::Send, ^{right}
+; ^right::Send, ^{right}
 ^l::Send, ^{right}
 
 
-+^left::Send, +^{left}
+; +^left::Send, +^{left}
 +^h::Send, +^{left}
 
-+^right::Send, +^{right}
+; +^right::Send, +^{right}
 +^l::Send, +^{right}
 
 
