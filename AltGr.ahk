@@ -4,13 +4,17 @@ LControl & RAlt Up:: AltGr := false
 ; The #If directive creates context-sensitive hotkeys and hotstrings
 #If (AltGr) ; If this variable has the value "true" 
 
+	; =========== AltGr should function as AltGr (a unique key)
 	+s::Send, "
 	j::SendRaw, [
 	k::SendRaw, ]
 	u::SendRaw, {
 	i::SendRaw, }  
 
-	; Trivial ones
+	; =========== AltGr should function as if hitting 'alt' 
+	F4::Send, !{F4}
+
+	; =========== Trivial ones
 	; 1::SendRaw, 
 	2::SendRaw, @
 	3::SendRaw, £
@@ -25,13 +29,11 @@ LControl & RAlt Up:: AltGr := false
 
 #If ; turn off context sensitivity 
 
-; (ctrl)+(alt) mappings
+; (ctrl)+(alt) mappings   â^s^b^c^dê^f^gê
 ^!u::SendRaw, {
 ^!i::SendRaw, }
 ^!j::SendRaw, [
 ^!k::SendRaw, ]
 
 
-
-; load the script, useful when making frequent changes
 ; F2::Reload

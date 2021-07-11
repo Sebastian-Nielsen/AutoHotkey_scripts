@@ -9,3 +9,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 !^SC01B::Send {~}{SPACE}  ; you only have to press "~" key once in order to get it
 
 SC01B::Send {¨}{SPACE}    ; you only have to press "¨" key once in order to get it
+
+
+½::Send {ESC}
+
