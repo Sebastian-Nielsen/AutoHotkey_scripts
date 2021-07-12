@@ -25,10 +25,6 @@
 SC15D:: AltGr := true ; assign the boolean value "true" to the variable 'AltGr''
 SC15D Up:: AltGr := false
 
-
-^#l::MoveCurrentWindowToRightDesktop()
-^#h::MoveCurrentWindowToLeftDesktop()
-
 ; The #If directive creates context-sensitive hotkeys and hotstrings
 #If (AltGr) ; If this variable has the value "true" 
 
@@ -37,11 +33,11 @@ SC15D Up:: AltGr := false
 	2::switchDesktopByNumber(2)
 	3::switchDesktopByNumber(3)
 	4::switchDesktopByNumber(4)
-	q::switchDesktopByNumber(5)
-	w::switchDesktopByNumber(6)
-	e::switchDesktopByNumber(7)
-	r::switchDesktopByNumber(8)
-	; 9::switchDesktopByNumber(9)
+	5::switchDesktopByNumber(5)
+	6::switchDesktopByNumber(6)
+	7::switchDesktopByNumber(7)
+	8::switchDesktopByNumber(8)
+	9::switchDesktopByNumber(9)
 
 	Numpad1::switchDesktopByNumber(1)
 	Numpad2::switchDesktopByNumber(2)
@@ -62,15 +58,15 @@ SC15D Up:: AltGr := false
 	c::createVirtualDesktop()
 	d::deleteVirtualDesktop()
 
-	;q::MoveCurrentWindowToDesktop(1)
-	;w::MoveCurrentWindowToDesktop(2)
-	;e::MoveCurrentWindowToDesktop(3)
-	;r::MoveCurrentWindowToDesktop(4)
-	;t::MoveCurrentWindowToDesktop(5)
-	;y::MoveCurrentWindowToDesktop(6)
-	;u::MoveCurrentWindowToDesktop(7)
-	;i::MoveCurrentWindowToDesktop(8)
-	;o::MoveCurrentWindowToDesktop(9)
+	q::MoveCurrentWindowToDesktop(1)
+	w::MoveCurrentWindowToDesktop(2)
+	e::MoveCurrentWindowToDesktop(3)
+	r::MoveCurrentWindowToDesktop(4)
+	t::MoveCurrentWindowToDesktop(5)
+	y::MoveCurrentWindowToDesktop(6)
+	u::MoveCurrentWindowToDesktop(7)
+	i::MoveCurrentWindowToDesktop(8)
+	o::MoveCurrentWindowToDesktop(9)
 
 	Right::MoveCurrentWindowToRightDesktop()
 	Left::MoveCurrentWindowToLeftDesktop()
